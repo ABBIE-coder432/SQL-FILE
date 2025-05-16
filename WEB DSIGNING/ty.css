@@ -1,0 +1,142 @@
+/* Reset default styles to remove browser inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background color of the entire page */
+body {
+    background-color: black;
+}
+
+/* Style for all h2 headings (e.g., page title) */
+h2 {
+    font-size: 38px;
+    color: orange;
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px; /* Push content down below fixed navbar */
+}
+
+/* General paragraph styling (used if any <p> elements are added) */
+p {
+    color: aliceblue;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+/* Navigation bar styling (top fixed) */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Style the unordered list in the nav */
+nav ul {
+    list-style: none; /* Remove default bullets */
+    display: flex; /* Arrange nav items in a row */
+    gap: 25px; /* Space between nav items */
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Style for navigation links */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover effect for navigation items */
+nav ul li:hover {
+    color: white;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+/* Logo image inside the navbar */
+.Logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Icon spacing inside nav (if any are used) */
+.nav-links i {
+    margin: 5px;
+}
+
+/* Styling for the search bar */
+.search-bar {
+    display: flex; /* Use flexbox to arrange input and button */
+    align-items: center; /* Vertically center the elements */
+    gap: 5px; /* Space between input and button */
+    top: 0; /* Position at the top */
+    padding: 5px 5px; /* Add padding inside search bar */
+    z-index: 1000; /* Ensure search bar stays on top */
+    position: absolute; /* Position it absolutely */
+    margin-left: 1250px; /* Move the search bar to the right */
+}
+
+/* Styling for the search input field */
+.search-bar input[type="text"] {
+    padding: 6px 10px; /* Padding inside the input */
+    border: 1px solid; /* Add a border */
+    border-radius: 1px; /* Slightly round the corners */
+}
+
+/* Styling for the search button */
+.search-bar button {
+    padding: 6px 12px; /* Padding inside the button */
+    background-color: #e8501d; /* Background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* 
+   Container for the entire media gallery.
+   Uses CSS Grid to organize child items in a responsive layout.
+*/
+.gallery-container {
+    display: grid; /* Enables grid layout */
+    
+    /* Automatically filling the row with as many columns as fit,
+       each being at least 300px wide and flexible up to 1 fraction of available space */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    gap: 20px; /* Space between each grid item */
+    margin: 50px auto; /* Vertical spacing + center the container horizontally */
+    padding: 20px; /* Inner spacing inside the container */
+    max-width: 1200px; /* Prevent container from growing too wide on large screens */
+}
+
+/* 
+   Creating styling for both image and video blocks inside the gallery.
+   Appling consistent size and appearance to each media item.*/
+.media {
+    width: 100%; /* Take full width of the grid cell */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure content covers the container without distortion */
+    border-radius: 10px; /* Slightly rounded corners for visual appeal */
+    background-color: #111; /* Dark background to match theme and fill gaps */
+}
+
+/*Ensures that the actual media elements also scale properly to fit their container.*/
+.media video,
+.media img {
+    width: 100%; /* Stretch to full width of container */
+    height: 100%; /* Stretch to full height of container */
+    object-fit: cover; /* Maintain aspect ratio and fill container */
+    display: block; /* Remove extra space below images/videos */
+    border-radius: 10px; /* Same rounded corners for consistency */
+}

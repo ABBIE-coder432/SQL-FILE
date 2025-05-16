@@ -1,0 +1,163 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+*{
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Makes width and height calculations include padding and border */
+    font-family: 'Segoe UI', sans-serif; /* Sets a default font for the entire page */
+}
+
+/* Style for the <legend> element, typically used for form fieldsets */
+legend{
+    font-weight: bold; /* Makes the text bold */
+    color: #222; /* Dark color for the text */
+    font-size: 100%; /* Sets the font size to default */
+}
+
+/* Ensures the <html> and <body> elements take up the full height of the viewport */
+body, html{
+    height: 100%; /* Full height for both the body and html elements */
+}
+
+/* Styles the container that wraps the main content */
+.container{
+    background-image: url(er.jpg); /* Sets a background image */
+    background-size: cover; /* Ensures the background covers the entire container */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets the container's height to the full viewport height */
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Vertically aligns content */
+    justify-content: center; /* Horizontally aligns content */
+}
+
+/* Styles the box that contains the contact info and form */
+.container-box{
+    margin-top: 5%; /* Adds a margin at the top */
+    display: flex; /* Uses flexbox layout to arrange left and right sections */
+    background-color: rgb(255, 255, 255, 0.9); /* White background with slight transparency */
+    height: 80%; /* Sets the height of the box */
+    width: 60%; /* Sets the width of the box */
+    max-width: 600px; /* Maximum width of 600px */
+    border-radius: 11px; /* Rounded corners */
+    overflow: hidden; /* Hides any overflow content */
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3); /* Adds a subtle shadow around the box */
+}
+
+/* Common styling for the left and right sections inside the box */
+.left, .right{
+    padding: 15px; /* Adds padding inside the left and right sections */
+    flex: 1; /* Ensures both sections take equal space in the container */
+}
+
+/* Left section styling (for contact information) */
+.left{
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text color */
+}
+
+/* Right section styling (for the registration form) */
+.right form{
+    display: flex; /* Uses flexbox for form elements */
+    flex-direction: column; /* Arranges form elements in a vertical stack */
+}
+
+/* Styling for input fields and text areas inside the right section */
+.right input, .right textarea{
+    margin-bottom: 15px; /* Adds space between form elements */
+    padding: 10px; /* Adds padding inside input and textarea fields */
+    border: 1px solid #CCC; /* Light border color */
+    border-radius: 6px; /* Rounded corners for input and textarea */
+}
+
+/* Specific styling for textareas to make them resizable vertically */
+.right textarea{
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 80px; /* Sets a minimum height for the textarea */
+}
+
+/* Styling for the submit button in the right section */
+.right button{
+    padding: 8px; /* Padding inside the button */
+    border: none; /* Removes border */
+    background-color: orange; /* Orange background */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size of the button text */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Styles for the navigation bar */
+nav{
+    position: fixed; /* Keeps the navbar fixed at the top of the screen */
+    top: 0; /* Positions the navbar at the top */
+    width: 100%; /* Full width of the page */
+    background-color: orange; /* Orange background color */
+    display: flex; /* Flexbox layout for the navbar items */
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-between; /* Distributes items with space between them */
+    padding: 5px 20px; /* Padding inside the navbar */
+    z-index: 1000; /* Ensures navbar stays on top of other elements */
+}
+
+/* Styling for the unordered list in the navigation bar */
+nav ul{
+    list-style: none; /* Removes default list bullets */
+    display: flex; /* Uses flexbox layout for list items */
+    gap: 25px; /* Space between each list item */
+    padding: 0; /* Removes default padding */
+    margin: 0 auto; /* Centers the list items */
+}
+
+/* Styling for the logo in the navbar */
+.Logo{
+    height: 60px; /* Sets the logo height */
+    width: auto; /* Maintains the aspect ratio of the logo */
+}
+
+/* Styles for the links in the navigation bar */
+nav ul li a{
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* White text color */
+    font-size: 18px; /* Font size for the link text */
+    font-weight: bold; /* Makes the link text bold */
+    left: 50%; /* This seems unnecessary and can be removed */
+}
+
+/* Hover effect for the navbar list items */
+nav ul li:hover{
+    color: white; /* Changes text color on hover (though it’s already white) */
+    transition: 1s ease; /* Adds a smooth transition effect */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Styling for icons inside navigation links */
+.nav-links i {
+    margin: 5px; /* Adds margin around icons */
+}
+/* Styling for the search bar */
+.search-bar {
+    display: flex; /* Use flexbox to arrange input and button */
+    align-items: center; /* Vertically center the elements */
+    gap: 5px; /* Space between input and button */
+    top: 0; /* Position at the top */
+    padding: 5px 5px; /* Add padding inside search bar */
+    z-index: 1000; /* Ensure search bar stays on top */
+    position: absolute; /* Position it absolutely */
+    margin-left: 1250px; /* Move the search bar to the right */
+}
+
+/* Styling for the search input field */
+.search-bar input[type="text"] {
+    padding: 6px 10px; /* Padding inside the input */
+    border: 1px solid; /* Add a border */
+    border-radius: 1px; /* Slightly round the corners */
+}
+
+/* Styling for the search button */
+.search-bar button {
+    padding: 6px 12px; /* Padding inside the button */
+    background-color: #e8501d; /* Background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+}

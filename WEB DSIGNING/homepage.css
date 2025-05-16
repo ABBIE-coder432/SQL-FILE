@@ -1,0 +1,133 @@
+/* Reset default styles to avoid browser inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background image and style for the body */
+body {
+    background-image: url(shifaaz-shamoon-qtbV_8P_Ksk-unsplash.jpg); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Style for the main heading (h1) */
+h1 {
+    font-size: 48px; /* Set the font size */
+    color: orange; /* Text color */
+    text-align: center; /* Center align the text */
+    font-family: 'Times New Roman'; /* Font family */
+    margin-top: 8%; /* Push the heading down from the top */
+    text-shadow: 12px 12px 15px black;/*Giving a shadow to the heading*/
+}
+
+/* Style for the secondary heading (h2) */
+h2 {
+    font-size: 38px; /* Font size */
+    color: white; /* Text color */
+    font-family: 'Times New Roman'; /* Font family */
+    margin-top: 100px; /* Margin to push heading down */
+    text-shadow: 3px 3px 6px black;/*Giving a shadow to the heading 2*/
+}
+
+.container-box{
+    margin-top: 5%; /* Adds a margin at the top */
+    display: flex; /* Uses flexbox layout to arrange left and right sections */
+    background-color:orange; /* White background with slight transparency */
+    height: 80%; /* Sets the height of the box */
+    width: 60%; /* Sets the width of the box */
+    max-width: 600px; /* Maximum width of 600px */
+    border-radius: 11px; /* Rounded corners */
+    overflow: hidden; /* Hides any overflow content */
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3); /* Adds a subtle shadow around the box */
+    margin-left: 70px; /*moving the container-box 70px away from the left margin*/
+}
+
+
+/* Style for paragraphs (p) */
+p {
+    color: white; /* Text color */
+    margin-top: 30px; /* Add space above the paragraph */
+    font-size: 30px; /* Font size */
+    text-shadow: 3px 3px 6px black; /*Giving a shadow to the paragraph*/
+}
+
+/* Styling for the navigation bar */
+nav {
+    position: fixed; /* Fix the navbar at the top of the page */
+    top: 0; /* Position it at the very top */
+    width: 100%; /* Full width of the page */
+    background-color: orange; /* Navbar background color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center the navbar items vertically */
+    justify-content: space-between; /* Spread out items */
+    padding: 5px 20px; /* Padding inside navbar */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Style the list of navigation items */
+nav ul {
+    list-style: none; /* Remove default list style */
+    display: flex; /* Display items in a row */
+    gap: 25px; /* Space between navigation items */
+    padding: 0; /* Remove padding */
+    margin: 0 auto; /* Center the list */
+}
+
+/* Style for the logo inside the navbar */
+.Logo {
+    height: 60px; /* Set logo height */
+    width: auto; /* Maintain the aspect ratio */
+}
+
+/* Style for navigation links */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    left: 50%; /* Center the links (though not always effective due to flexbox) */
+}
+
+/* Hover effect for navigation links */
+nav ul li:hover {
+    color: white; /* Change color on hover */
+    transition: 1s ease; /* Smooth transition */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+/* Style for icons inside the navbar (if any are used) */
+.nav-links i {
+    margin: 5px; /* Add space around icons */
+}
+
+/* Styling for the search bar */
+.search-bar {
+    display: flex; /* Use flexbox to arrange input and button */
+    align-items: center; /* Vertically center the elements */
+    gap: 5px; /* Space between input and button */
+    top: 0; /* Position at the top */
+    padding: 5px 5px; /* Add padding inside search bar */
+    z-index: 1000; /* Ensure search bar stays on top */
+    position: absolute; /* Position it absolutely */
+    margin-left: 1250px; /* Move the search bar to the right */
+}
+
+/* Styling for the search input field */
+.search-bar input[type="text"] {
+    padding: 6px 10px; /* Padding inside the input */
+    border: 1px solid; /* Add a border */
+    border-radius: 1px; /* Slightly round the corners */
+}
+
+/* Styling for the search button */
+.search-bar button {
+    padding: 6px 12px; /* Padding inside the button */
+    background-color: #e8501d; /* Background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+}

@@ -1,0 +1,172 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+*{
+    margin: 0;  /*Removes default margins from all elements (makes layout more predictable).*/
+    padding: 0; /*Removes default padding from all elements (makes layout more predictable).*/
+    box-sizing: border-box;  /*Includes padding and border inside the element’s total width/height. Prevents unexpected sizing issues. */
+}
+
+/* Heading 1 (main title) styling */
+h1{
+    font-size: 50px;  /* Sets the font size for the main title */
+    font-family: 'Times New Roman';  /* Uses a classic serif font */
+    color: orange;  /* Sets the text color to orange */
+    text-align: center;  /* Centers the title horizontally */
+    margin-top: 80px;  /* Adds space above the title */
+}
+
+/* Heading 3 styling for subheadings */
+h3{
+    font-size: 30px;  /* Sets the font size for subheadings */
+    font-family: 'Times New Roman';  /* Uses the same serif font */
+    color: orange;  /* Sets the text color to orange */
+    margin-left: 20px;  /* Adds margin to the left */
+    margin-right: 20px;  /* Adds margin to the right */
+}
+
+/* Heading 4 styling for smaller subheadings */
+h4{
+    font-size: 30px;  /* Sets the font size */
+    font-family: 'Times New Roman';  /* Uses the same serif font */
+    color: orange;  /* Sets the text color to orange */
+}
+
+/* Paragraph styling */
+p{
+    font-size: 15px;  /* Sets the font size */
+    font-family: Arial;  /* Uses a sans-serif font for readability */
+    color: white;  /* Sets the text color to white */
+    margin-left: 20px;  /* Adds margin to the left */
+    margin-right: 20px;  /* Adds margin to the right */
+}
+
+/* Body and html styling */
+html, body{
+    background-image: url(im3.jpg);  /* Dark background image the page */
+    height: 100%;  /* Ensures the body takes full height of the viewport */
+    margin-bottom: -80px;  /* Pulls the body up by 80px to create a tight layout */
+    display: flex; /* Allows stacking child elements vertically */
+    flex-direction: column; /* Stacks child elements vertically */
+}
+
+/* Wrapper for the page to ensure the content spans at least the full height of the screen */
+.page-wrapper{
+    display: flex; /* Flexbox layout for the wrapper */
+    flex-direction: column; /* Ensures content is arranged vertically */
+    min-height: 100vh;  /* Ensures the page takes at least the full viewport height */
+}
+
+/* Main content area between the header and footer */
+.main-content{
+    flex: 1;  /* Takes up all available space between the header and footer */
+}
+
+/* Footer styling */
+.footer{
+    background: #000;  /* Black background for the footer */
+    color: white;  /* White text color */
+    padding: 20px;  /* Adds space between the footer content and its edges */
+    align-items: center;  /* Centers the content inside the footer */
+}
+
+/* Grid layout for the footer content */
+.footer-container{
+    display: grid; /* Uses grid layout for the footer items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Defines responsive grid columns */
+    gap: 30px;  /* Adds space between grid items */
+    max-width: 1200px;  /* Limits the width of the footer container */
+    margin: auto;  /* Centers the grid container */
+}
+
+/* Footer column styling */
+.footer-colum h3{
+    margin-bottom: 15px;  /* Adds space below the column title */
+}
+
+/* Styling for elements inside footer columns */
+.footer-colum p, .footer-colum li, .footer-colum a, .footer-colum label{
+    color: #ccc;  /* Sets text color to light gray */
+    font-size: 14px;  /* Sets font size */
+    line-height: 1.6;  /* Increases line height for readability */
+}
+
+/* Removes default list styling in footer columns */
+.footer-colum ul{
+    list-style: none;  /* No bullets or numbering in the list */
+    padding: 0;  /* Removes padding */
+}
+
+/* Footer column links styling */
+.footer-colum a {
+    text-decoration: none;  /* Removes underline from links */
+}
+
+/* Navigation bar styling */
+nav{
+    position: fixed;  /* Fixes the navigation bar at the top of the page */
+    top: 0;  /* Positions it at the top */
+    width: 100%;  /* Full width of the page */
+    background-color: orange;  /* Orange background color */
+    display: flex; /* Uses flexbox to align items */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;  /* Distributes space between items */
+    padding: 5px 20px;  /* Adds padding inside the navbar */
+    z-index: 1000;  /* Ensures the navbar stays on top of other elements */
+}
+
+/* Styling for navigation list items */
+nav ul{
+    list-style: none;  /* Removes default list styling */
+    display: flex;  /* Uses flexbox to align list items horizontally */
+    gap: 25px;  /* Adds space between list items */
+    padding: 0;  /* Removes padding */
+    margin: 0 auto;  /* Centers the list */
+}
+
+/* Logo styling in the navigation bar */
+.Logo{
+    height: 60px;  /* Specifies the height of the logo */
+    width: auto;  /* Maintains the aspect ratio of the logo */
+}
+
+/* Navigation link styling */
+nav ul li a{
+    text-decoration: none;  /* Removes underline from links */
+    color: white;  /* White text color for the links */
+    font-size: 18px;  /* Sets the font size */
+    font-weight: bold;  /* Makes the text bold */
+    left: 50%;  /* This seems unnecessary and can be removed */
+}
+
+/* Styling for navigation icons */
+.nav-links i {
+    margin: 5px;  /* Adds space around icons */
+}
+
+/* Styling for the search bar */
+.search-bar {
+    display: flex; /* Use flexbox to arrange input and button */
+    align-items: center; /* Vertically center the elements */
+    gap: 5px; /* Space between input and button */
+    top: 0; /* Position at the top */
+    padding: 5px 5px; /* Add padding inside search bar */
+    z-index: 1000; /* Ensure search bar stays on top */
+    position: absolute; /* Position it absolutely */
+    margin-left: 1250px; /* Move the search bar to the right */
+}
+
+/* Styling for the search input field */
+.search-bar input[type="text"] {
+    padding: 6px 10px; /* Padding inside the input */
+    border: 1px solid; /* Add a border */
+    border-radius: 1px; /* Slightly round the corners */
+}
+
+/* Styling for the search button */
+.search-bar button {
+    padding: 6px 12px; /* Padding inside the button */
+    background-color: #e8501d; /* Background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+}
